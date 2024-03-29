@@ -8,4 +8,15 @@ public class Contato {
         this.nomeContato = nome;
         this.telefoneContato = telefone;
     }
+
+    public String getNomeContato() {
+        return this.nomeContato;
+    }
+
+    public int getTelefoneContato() {
+        return this.telefoneContato;
+    }
+
+    
+
 }

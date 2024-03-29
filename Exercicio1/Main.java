@@ -20,19 +20,19 @@ public class Main {
 
         switch (operador) {
             case '+':
-                resultado = a + b;
+                resultado = calculadora.soma(a, b);
                 break;
 
             case '-':
-                resultado = a - b;
+                resultado = calculadora.sub(a, b);
                 break;
 
             case '/':
-                resultado = a / b;
+                resultado = calculadora.div(a, b);
                 break;
 
             case '*':
-                resultado = a * b;
+                resultado = calculadora.mult(a, b);
                 break;
 
             default:

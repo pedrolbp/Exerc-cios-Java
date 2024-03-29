@@ -41,10 +41,10 @@ public class Jogador{
         return this.nivelJogador;
     }
 
-
-
-
-
-
+    public void printInfoJogador(){
+        System.out.println("Nome do jogador: "+ getNome());
+        System.out.println("Pontuacao do jogador: "+ getPontuacao());
+        System.out.println("Nivel do jogador: "+ getNivel());
+    }
 
     }

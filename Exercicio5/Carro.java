@@ -4,7 +4,7 @@ public class Carro {
     private String marcaCarro;
     private String modeloCarro;
     private int anoCarro;
-    private double velocidadeAtual;  //velocidade em m/s
+    private double velocidadeAtual;  //velocidade em km/h
     private double aceleracao = 3; //velocidade em m/s^2
     
     public Carro(String marca, String modelo, int ano, double velocidadeAtualInicial){
@@ -14,14 +14,14 @@ public class Carro {
         this.velocidadeAtual = velocidadeAtualInicial;
     }
     //tempo = Quantidade de tempo que o carro estará acelerando.
-    public void acelerar(double tempo, double velocidadeAtualFunc){
-        double novaVelocidade = velocidadeAtualFunc + this.aceleracao * tempo;
-        this.velocidadeAtual = novaVelocidade > 0? novaVelocidade : 0;
+    public void acelerar(double tempo){
+        double novaVelocidade = (this.velocidadeAtual/3.6) + this.aceleracao * tempo;
+        this.velocidadeAtual = (novaVelocidade > 0? novaVelocidade : 0) * 3.6;
     }
     
-    public void frear(double tempo, double velocidadeAtualFunc){
-        double novaVelocidade = velocidadeAtualFunc - this.aceleracao * tempo;
-        this.velocidadeAtual = novaVelocidade > 0? novaVelocidade : 0;
+    public void frear(double tempo){
+        double novaVelocidade = (this.velocidadeAtual / 3.6) - this.aceleracao * tempo;
+        this.velocidadeAtual = (novaVelocidade > 0? novaVelocidade : 0) * 3.6;
     }
 
     public String getMarca(){
@@ -38,6 +38,13 @@ public class Carro {
 
     public double getVelocidadeAtual(){
         return this.velocidadeAtual;
+    }
+
+    public void printInfoCarro(){
+        System.out.println("Marca do carro: "+ getMarca());
+        System.out.println("Modelo do carro: "+ getModelo());
+        System.out.println("Ano do carro: "+ getAno());
+        System.out.println("Velocidade atual do carro: "+ getVelocidadeAtual());
     }
 
 }
