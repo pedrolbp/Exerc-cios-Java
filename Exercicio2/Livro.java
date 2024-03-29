@@ -15,15 +15,15 @@ public class Livro {
     }
 
     public String getTitulo(){
-        return TituloLivro;
+        return this.TituloLivro;
     }
 
     public String getAutor(){
-        return AutorLivro;
+        return this.AutorLivro;
     }
 
     public int getAno(){
-        return AnoLivro;
+        return this.AnoLivro;
     }
 
     public void getInfo(){
