@@ -41,7 +41,7 @@ public class Produto {
         ArrayProdutos.add(novoProduto);
     }
 
-public static Produto buscarProduto(String nome){
+    public static Produto buscarProduto(String nome){
         for (Produto produto : ArrayProdutos) {
             if(produto.nomeProduto.equalsIgnoreCase(nome)){
                 return produto;
@@ -62,11 +62,15 @@ public static Produto buscarProduto(String nome){
 
     public static void printTodosProdutos(){
         System.out.println("-----PRODUTOS-----");
-        for (Produto produto : ArrayProdutos) {
+        if(ArrayProdutos.isEmpty()){
+            System.out.println("Não existem produtos!");
+        } else {
+            for (Produto produto : ArrayProdutos) {
             System.out.println("Produto: "+ produto.nomeProduto);
             System.out.println("Quantidade: "+ produto.quantidadeProduto);
             System.out.println("Preco: "+ produto.precoProduto);
             System.out.println("------------------------------------------");
+        }
         }
     }
 

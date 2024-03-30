@@ -1,5 +1,4 @@
 package Exercicio6;
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Agenda {
@@ -20,21 +19,24 @@ public class Agenda {
         return null;
     }
 
-    public void setNomeContato(String nome, String novoNomeContato) {
+    public static void setNomeContato(String nome, String novoNomeContato) {
         Agenda.buscarContato(nome).nomeContato = novoNomeContato;
     }
 
-    public void setTelefoneContato(String nome, int novoTelefoneContato) {
+    public static void setTelefoneContato(String nome, int novoTelefoneContato) {
         Agenda.buscarContato(nome).telefoneContato = novoTelefoneContato;
     }
 
-
     public static void printTodosContatos(){
-        for (Contato contato : ArrayContato) {
-            System.out.println("-----CONTATOS-----");  
-            System.out.println("Nome: "+ contato.nomeContato);
-            System.out.println("Telefone: "+ contato.telefoneContato);
-            System.out.println("--------------------------------------");
+        System.out.println("-----CONTATOS-----");
+        if(ArrayContato.isEmpty()){
+            System.out.println("Não existem contatos na lista!");
+        } else {
+            for (Contato contato : ArrayContato) {  
+                System.out.println("Nome: "+ contato.nomeContato);
+                System.out.println("Telefone: "+ contato.telefoneContato);
+                System.out.println("--------------------------------------");
+            }
         }
     }
 

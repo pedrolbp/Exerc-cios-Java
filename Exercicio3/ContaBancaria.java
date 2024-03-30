@@ -1,5 +1,4 @@
 package Exercicio3;
-import java.util.*;
 
 public class ContaBancaria{
     private int numeroConta;
