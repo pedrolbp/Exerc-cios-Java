@@ -37,5 +37,7 @@ public class main8 {
         Pedido.printPedido(30);
         System.out.println("-------------------Printando pedido------------------- ");
 
+        System.out.println("Total Pedidos: "+ Pedido.totalPedidos());
+
     }
 }

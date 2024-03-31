@@ -20,6 +20,8 @@ public class Pedido {
         ArrayPedidos.add(novoPedido);
     }
 
+
+    //Adiciona uma pizza no ArrayPizzas de um pedido ja criado, especificado pelo codigo do pedido.
     public static void addPizza(int codigo){
         int repostaNumero;
         String nome;
@@ -53,6 +55,7 @@ public class Pedido {
         }
     }
 
+
     public static Pedido buscarPorCodigo(int codigoUsuario){
         for (Pedido pedido : ArrayPedidos) {
             if (pedido.codigoPedido == codigoUsuario ) {
@@ -62,6 +65,7 @@ public class Pedido {
         return null;
     }
 
+    //Printa o pedido especificado pelo codigo
     public static void printPedido(int codigo){
         if (buscarPorCodigo(codigo) == null) {
             System.out.println("Pedido não encontrado!");
@@ -113,7 +117,7 @@ public class Pedido {
         return buscarPorCodigo(codigo).enderecoEntrega;
     }
 
-    public double totalPedidos() {
+    public static double totalPedidos() {
         return ArrayPedidos.size();
     }
 
